@@ -1,0 +1,80 @@
+{% include 'header.html' %}
+
+
+<br><br>
+<div class="container mt-5">
+<div class="row">
+    <div class="col-sm-3 p-2">
+        <div class="card shadow bg-dark">
+            <div class="card-body">
+            <h4 class="text-light">Jobsno</h4>
+            <h5 style="color : #F1948A">{{Jobno}}</h5>
+        </div>
+        <div class="card-footer">
+            <a href="{% url 'view_user' %}" class="text-warning">View Details >></a>
+        </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3 p-2">
+        <div class="card shadow bg-dark">
+            <div class="card-body">
+            <h4 class="text-light">IndustryPracticesare</h4>
+            <h5 style="color : #F1948A">{{IndustryPracticesare}}</h5>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'rejected_booking' %}" class="text-warning">View Details >></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 p-2">
+        <div class="card shadow bg-dark">
+            <div class="card-body">
+            <h4 class="text-light">New Applied Req</h4>
+            <h5 style="color : #F1948A"> {{totalnewapplied}}</h5>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'accepted_booking' %}" class="text-warning">View Details >></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4 p-2">
+        <div class="card shadow bg-dark">
+            <div class="card-body">
+            <h4 class="text-light">Total Confirmed Applied</h4>
+            <h5 style="color : #F1948A"> {{totalconfirmApplied}}</h5>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'confirmed_booking' %}" class="text-warning">View Details >></a>
+            </div>
+        </div>
+    </div>
+
+<div class="col-sm-4 p-2">
+        <div class="card shadow bg-dark">
+            <div class="card-body">
+            <h4 class="text-light">All Applied</h4>
+            <h5 style="color : #F1948A"> {{allappied}}</h5>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'all_booking' %}" class="text-warning">View Details >></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4 p-2">
+        <div class="card shadow bg-dark">
+            <div class="card-body">
+            <h4 class="text-light">Total Users</h4>
+            <h5 style="color : #F1948A"> {{totalusers}}</h5>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'view_user' %}" class="text-warning">View Details >></a>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+    </div>

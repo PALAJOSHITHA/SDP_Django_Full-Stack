@@ -1,0 +1,22 @@
+{% block body %}
+{% include 'navigation.html' %}
+
+<h4 class="mt-4 ml-3" style="font-size: 22px; color: blueviolet;">Welcome {{request.user.first_name}} {{request.user.last_name}}</h4>
+
+<img src="{% static 'img/2.jpg' %}" alt="Company Logo">
+<li><a href="{% url 'home3' %}"><i class="fa fa-home" style="font-size:20px;color:white">Dashboard</i></a></li>
+      <li><a href="{% url 'view_employee' %}">View-Employees</a></li>
+{% if error == "no" %}
+<script>
+    alert("Profile Updated Successfully");
+    window.location = ('{% url "recruiterhome" %}')
+</script>
+{% endif %}
+
+{% if error == "yes" %}
+<script>
+    alert("something went wrong");
+</script>
+{% endif %}
+{% endblock %}
+

@@ -1,0 +1,59 @@
+{% block body %}
+{% include 'header.html' %}
+
+{% if error == "no" %}
+<script>
+    alert(" Successful ");
+    window.location = ("{% url 'resume_success' %}")
+</script>
+{% endif %}
+
+{% if error == "yes" %}
+<script>
+    alert("Something went wrong, Try again..");
+</script>
+{% endif %}
+
+<div class="container mt-5">
+    <h2 class = "text-center" style = "color : red ; font-weight : bold ;
+     font-family : Castellar">" FILL DETAILS"</h2>
+<form class="container mt-4" name="Apply Now" method="post" enctype="multipart/form-data" onsubmit="return checkpass();">
+    {% csrf_token %}
+    <label><b>First Name</b></label>
+    <input type = "text" name="fname" class="form-control" placeholder="Enter Your name"required>
+    <label><b>Middle Name</b></label>
+    <input type = "text" name="mname" class="form-control" placeholder="Enter Your name"required>
+    <label><b>Last Name</b></label>
+    <input type = "text" name="lname" class="form-control" placeholder="Enter Your name"required>
+    <label><b>Image</b></label>
+    <input type="file" class="form-control" name="image"required>
+
+    <label><b>Gender:</b></label>
+                <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+           <div></div>
+
+    <label><b>Description</b></label>
+    <textarea class="form-control" name="description" placeholder="Enter Description" required></textarea>
+
+    <label><b>DateOfBirth</b></label>
+    <input type = "date" name="startdate" class="form-control" required>
+
+    <label><b>Email ID(Email Address)</b></label>
+    <textarea class="form-control" name="venue" placeholder="Enter Email Address" required></textarea>
+
+    <label><b>Mobile No</b></label>
+    <textarea class="form-control" name="venue" placeholder="Enter Mobile No" required></textarea>
+    <label><b>Designation</b></label>
+    <textarea class="form-control" name="venue" placeholder="Enter Designation" required></textarea>
+    <label><b>Upload Resume</b></label>
+    <input type="file" class="form-control" name="Resume"required>
+
+
+
+    <a href="resume_success" class="btn btn-primary">Submit</a>
+    </div>
+
+</form>
+
+{% endblock %}

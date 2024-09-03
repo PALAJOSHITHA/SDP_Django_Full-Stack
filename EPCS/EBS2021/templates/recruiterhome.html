@@ -1,0 +1,61 @@
+{% load static %}
+{% block body %}
+{% include 'nav.html' %}
+
+<h4 class="mt-4 ml-3" style="font-size: 22px; color: blueviolet;">Welcome {{request.user.first_name}} {{request.user.last_name}}</h4>
+
+ <div id="demo" class="carousel slide" data-ride="carousel"
+style = "margin-top : 8px">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active mb-3">
+      <img src="{% static 'img/j4.jpg' %}"  width="100%" height="500">
+    </div>
+    <div class="carousel-item mb-3">
+      <img src="{% static 'img/j1.jpg' %}"  width="100%" height="500">
+    </div>
+    <div class="carousel-item mb-3">
+        <img src="{% static 'img/j3.jpg' %}"  width="100%" height="500">
+      </div>
+    <div class="carousel-item mb-3">
+      <img src="{% static 'img/j2.jpg' %}"  width="100%" height="500">
+    </div>
+    <div class="carousel-item mb-3">
+        <img src="{% static 'img/j3.jpg' %}"  width="100%" height="500">
+      </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo"
+  data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+<li><a href="{% url 'home3' %}"><i class="fa fa-home" style="font-size:20px;color:white">Dashboard</i></a></li>
+      <li><a href="{% url 'view_employee' %}">View-Employees</a></li>
+{% if error == "no" %}
+<script>
+    alert("Profile Updated Successfully");
+    window.location = ('{% url "recruiterhome" %}')
+</script>
+{% endif %}
+
+{% if error == "yes" %}
+<script>
+    alert("something went wrong");
+</script>
+{% endif %}
+{% endblock %}
+

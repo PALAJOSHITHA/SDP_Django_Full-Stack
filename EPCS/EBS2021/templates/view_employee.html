@@ -1,0 +1,91 @@
+{% load static %}
+{% block body %}
+{% include 'nav.html'%}
+<h2 align="center"><u>View All Employees</u></h2>
+
+Total Employees = {{count}}  <br><br>
+
+<table align="center" border="2">
+    <tr style="font-weight:bold">
+        <td>ID</td>
+        <td>Full Name</td>
+        <td>EMAIL ID</td>
+        <td>Username</td>
+        <td>Loction</td>
+        <td>Contact No</td>
+        <td>Registration Time</td>
+        <td>Action</td>
+    </tr>
+    <tr style="font-weight:bold">
+        <td>2100032201</td>
+        <td>sushu</td>
+        <td>sushma@gmail.com</td>
+        <td>sushma</td>
+        <td>vadamalapeta</td>
+        <td>720708465</td>
+        <td>12:40</td>
+        <td>Delete</td>
+    </tr>
+    <tr style="font-weight:bold">
+        <td>2100032202</td>
+        <td>joshi</td>
+        <td>jo@gmail.com</td>
+        <td>jo</td>
+        <td>kodur</td>
+        <td>720708468</td>
+        <td>12:40</td>
+        <td>Delete</td>
+    </tr>
+    <tr style="font-weight:bold">
+        <td>2100032257</td>
+        <td>anu</td>
+        <td>anu@gmail.com</td>
+        <td>anu</td>
+        <td>vaddeshwaram</td>
+        <td>720708461</td>
+        <td>12:40</td>
+        <td>Delete</td>
+    </tr>
+    <tr style="font-weight:bold">
+        <td>2100032547</td>
+        <td>hari</td>
+        <td>hari@gmail.com</td>
+        <td>harini</td>
+        <td>peta</td>
+        <td>720718465</td>
+        <td>12:40</td>
+        <td>Delete</td>
+    </tr>
+    <tr style="font-weight:bold">
+        <td>2100032212</td>
+        <td>suma</td>
+        <td>suma@gmail.com</td>
+        <td>suma</td>
+        <td>vempalli</td>
+        <td>920708465</td>
+        <td>12:40</td>
+        <td>Delete</td>
+    </tr>
+
+    {% for users in userdata %}
+    <tr>
+        <td>{{users.id}}</td>
+        <td>{{users.fullname}}</td>
+        <td>{{users.email}}</td>
+        <td>{{users.username}}</td>
+        <td>{{users.location}}</td>
+        <td>{{users.contact}}</td>
+        <td>{{users.registrationtime}}</td>
+        <td>
+
+            <a href="/deleteemp/{{recruiter.id}}" >Delete</a>
+
+        </td>
+
+    </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>
+{% endblock %}

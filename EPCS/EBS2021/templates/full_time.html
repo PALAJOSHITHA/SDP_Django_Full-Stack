@@ -1,0 +1,74 @@
+{% load static %}
+{% block body %}
+{% include 'header.html'%}
+<h1>Industry</h1>
+<h4><label class="container">All
+    <h1><input type="checkbox" checked="checked"></h1>
+  <span class="checkmark"></span>
+</label></h4>
+
+<h4><label class="container">Finance & Accounting
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label></h4>
+  <h4><label class="container">Administration & Faculties
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label></h4>
+   <h4> <label class="container">Marketing & Communication
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label></h4>
+    <h4><label class="container">IT Software-Application programme
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label></h4>
+    <h4><label class="container">IT-Software System Programming
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label></h4>
+   <h4> <label class="container">It software-Telcom Software
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label></h4>
+
+<h4><label class="container">other
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label></h4>
+
+
+
+div class="card-deck-wrapper">
+  <div class="card-deck">
+    <div class="card">
+      <img class="card-img-top" src="static/img/j1.jpg" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title">Head Risk</h4>
+        <p class="card-text">Chennai</p>
+        <p class="card-text"><small class="text-muted">Posted - 30 April 2023</small></p>
+          <a href="add_Resume" class="btn btn-primary">Apply Now</a>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="static/img/j2.jpg" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title">Institutional Equity Sales</h4>
+        <p class="card-text">Mumbai</p>
+        <p class="card-text"><small class="text-muted">Posted - 29 April 2023</small></p>
+          <a href="add_Resume" class="btn btn-primary">Apply Now</a>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="static/img/j3.jpg" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title">Marketing Automation Manager</h4>
+        <p class="card-text">Chennai,Bengaluru/Bangalore</p>
+        <p class="card-text"><small class="text-muted">Posted - 27 April 2023</small></p>
+          <a href="add_Resume" class="btn btn-primary">Apply Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  {% endblock %}
